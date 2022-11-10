@@ -1,0 +1,7 @@
+Instalação do Bootstrap no projeto:
+
+1: Acessar a pasta do projeto ANGULAR;
+2: Executar o comando: npm install bootstrap --save
+3: Adicionar dentro do arquivo angular.json, a seguinte linha,
+dentro da opção style "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+4: Reiniciar o servidor angular

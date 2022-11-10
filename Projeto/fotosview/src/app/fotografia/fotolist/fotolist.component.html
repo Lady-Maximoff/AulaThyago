@@ -1,0 +1,26 @@
+<!-- <p>{{tituloPagina}}</p> -->
+
+<div class="container">
+    <!-- <button class="btn btn-primary" (click)="mudar()">Clicar</button> -->
+
+    <div class="row">
+        <div class="col-4" *ngFor="let Ariane of imagens; index as i" style="padding-top: 3%;">
+            <!-- <div *ngIf="controle == true || i%2 == 0"> -->
+    
+                <div class="card mt-5" style="width: 19rem;" >
+                    <app-foto [imagens]="Ariane.img"></app-foto>
+                    <div class="card-body bg-dark text-center text-light">
+                      <h2 class="card-text">{{Ariane.titulo}}</h2>
+                    </div>
+                  </div>
+    
+                <!--<img [src]="Ariane.img" alt="" width="250">
+                <p>{{Ariane.titulo}} index: {{i}}</p>-->   
+                
+            </div>
+        </div>
+
+    </div>
+
+
+
