@@ -1,1 +1,53 @@
-<p>fotoform works!</p>
+<!-- Para se trabalhar com formlário no angular temos as seguintes opções:
+Template Driven
+Data Driven -->
+<!-- -Template Driven-
+1 - ngForm vai permitir criar uma variável no html 
+2 - ngModel vai trabalhar em conjunto com o ngForm
+3 - ngSubmit vai enviar as informações do formulário para o arquivo .ts-->
+
+<!-- Obs: para usar o ngForm precisa fazer a importação do modulo FormsModule no arquivo de modulo que é responsavel pelo component  -->
+
+<!-- <div class="container" style="margin-top: 30px;">
+    <h1 class="text-center">Formulário de Cadastro</h1>
+
+<form #formulario="ngForm" (ngSubmit)="cadastrar(formulario)">
+
+    <div class="form-group">
+        <label>Endereço da Imagem (URL): </label>
+        <input type="text" name="img" class="form-control" placeholder="http://imagem.com" ngModel required>
+    </div>
+
+    <div class="form-group mt-3">
+      <label>Titulo da Foto</label>
+      <input type="text" name="titulo" class="form-control" placeholder="Titulo da Foto" ngModel required>
+    </div>
+
+    <button type="submit" class="btn btn-dark mt-3" [disabled]="formulario.invalid">Enviar</button>
+  </form>
+
+
+</div> -->
+
+
+
+<div class="container" style="margin-top: 30px;">
+    <h1 class="text-center">Formulário de Cadastro</h1>
+
+<form [formGroup]="formulario" (ngSubmit)="cadastrar(formulario)">
+
+    <div class="form-group">
+        <label>Endereço da Imagem (URL): </label>
+        <input type="text" formControlName="img" class="form-control" placeholder="http://imagem.com" required minlength="3">
+    </div>
+
+    <div class="form-group mt-3">
+      <label>Titulo da Foto</label>
+      <input type="text" formControlName="titulo" class="form-control" placeholder="Titulo da Foto" required minlength="2">
+    </div>
+
+    <button type="submit" class="btn btn-dark mt-3" [disabled]="formulario.invalid">Enviar</button>
+  </form>
+
+
+</div>

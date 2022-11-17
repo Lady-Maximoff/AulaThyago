@@ -14,7 +14,8 @@ import { FotolistComponent } from "./fotolist/fotolist.component";
     ],
     exports:[
         FotoComponent,
-        FotolistComponent
+        FotolistComponent,
+        FotoformComponent
     ],
 
     imports: [

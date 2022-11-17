@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';
+import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 //Modulos para compartilhar entre os componentes, coloca-se no shared module
 
 @NgModule({
@@ -10,7 +11,10 @@ import { HttpClientModule} from '@angular/common/http';
   exports: [
     CommonModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+    
   ]
 })
 export class SharedModule { }
